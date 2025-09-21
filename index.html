@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asher Lim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #f3f3f3;
+      --secondary-color: #3b3b3b;
+      --accent-color: #e0e0e0;
+      --text-primary: #e0e0e0;
+      --text-secondary: #e0e0e0;
+      --text-light: #e0e0e0;
+      --bg-primary: #121212;
+      --bg-secondary: #1f1f1f;
+      --bg-accent: #1f1f1f;
+      --border-color: #3b3b3b;
+      --star-dark: #6f6f6f;
+      --star-medium: #a4a4a4;
+      --star-light: #e8e8e8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: var(--bg-primary);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-family: 'Pixelify Sans', 'Inter', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .hero-text .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.9rem;
+      background: transparent;
+      color: var(--primary-color);
+      border: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+    }
+
+    .hero-links a:hover {
+      background: var(--primary-color);
+      color: var(--bg-primary);
+      border-color: var(--primary-color);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: aqua; */
+      height: 100%;
+      position: relative;
+    }
+
+    .star-1 {
+      position: absolute;
+      top: -80px;
+      right: 20%;
+      box-shadow: 48px 8px 0 0 var(--star-dark), 48px 24px 0 0 var(--star-medium), 32px 32px 0 0 var(--star-medium), 48px 32px 0 0 var(--star-light), 64px 32px 0 0 var(--star-medium), 40px 40px 0 0 var(--star-dark), 48px 40px 0 0 var(--star-light), 56px 40px 0 0 var(--star-dark), 8px 48px 0 0 var(--star-dark), 24px 48px 0 0 var(--star-medium), 32px 48px 0 0 var(--star-light), 40px 48px 0 0 var(--star-light), 48px 48px 0 0 var(--star-light), 56px 48px 0 0 var(--star-light), 64px 48px 0 0 var(--star-light), 72px 48px 0 0 var(--star-medium), 88px 48px 0 0 var(--star-dark), 40px 56px 0 0 var(--star-dark), 48px 56px 0 0 var(--star-light), 56px 56px 0 0 var(--star-dark), 32px 64px 0 0 var(--star-medium), 48px 64px 0 0 var(--star-light), 64px 64px 0 0 var(--star-medium), 48px 72px 0 0 var(--star-medium), 48px 88px 0 0 var(--star-dark);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-2 {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      box-shadow: 16px 8px 0 0 var(--star-medium), 8px 16px 0 0 var(--star-medium), 24px 16px 0 0 var(--star-medium), 16px 24px 0 0 var(--star-medium);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-6 {
+      position: absolute;
+      bottom: 10%;
+      right: 30%;
+      box-shadow: 16px 8px 0 0 var(--star-medium), 8px 16px 0 0 var(--star-medium), 24px 16px 0 0 var(--star-medium), 16px 24px 0 0 var(--star-medium);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-3 {
+      position: absolute;
+      top: 2%;
+      left: 4%;
+      box-shadow: 16px 8px 0 0 var(--star-medium);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-5 {
+      position: absolute;
+      top: 80%;
+      right: 4%;
+      box-shadow: 16px 8px 0 0 var(--star-medium);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-4 {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      box-shadow: 64px 8px 0 0 rgba(111, 111, 111, 1), 64px 16px 0 0 rgba(111, 111, 111, 1), 32px 32px 0 0 rgba(164, 164, 164, 1), 64px 32px 0 0 rgba(164, 164, 164, 1), 96px 32px 0 0 rgba(164, 164, 164, 1), 40px 40px 0 0 rgba(164, 164, 164, 1), 64px 40px 0 0 rgba(232, 232, 232, 1), 88px 40px 0 0 rgba(164, 164, 164, 1), 64px 48px 0 0 rgba(232, 232, 232, 1), 56px 56px 0 0 #ffffff, 64px 56px 0 0 #ffffff, 72px 56px 0 0 #ffffff, 8px 64px 0 0 rgba(111, 111, 111, 1), 16px 64px 0 0 rgba(111, 111, 111, 1), 32px 64px 0 0 rgba(164, 164, 164, 1), 40px 64px 0 0 rgba(232, 232, 232, 1), 48px 64px 0 0 #ffffff, 56px 64px 0 0 #ffffff, 64px 64px 0 0 #ffffff, 72px 64px 0 0 #ffffff, 80px 64px 0 0 #ffffff, 88px 64px 0 0 rgba(232, 232, 232, 1), 96px 64px 0 0 rgba(164, 164, 164, 1), 112px 64px 0 0 rgba(111, 111, 111, 1), 120px 64px 0 0 rgba(111, 111, 111, 1), 56px 72px 0 0 #ffffff, 64px 72px 0 0 #ffffff, 72px 72px 0 0 #ffffff, 64px 80px 0 0 #ffffff, 40px 88px 0 0 rgba(164, 164, 164, 1), 64px 88px 0 0 rgba(232, 232, 232, 1), 88px 88px 0 0 rgba(164, 164, 164, 1), 32px 96px 0 0 rgba(164, 164, 164, 1), 64px 96px 0 0 rgba(164, 164, 164, 1), 96px 96px 0 0 rgba(164, 164, 164, 1), 64px 112px 0 0 rgba(111, 111, 111, 1), 64px 120px 0 0 rgba(111, 111, 111, 1);
+      height: 8px;
+      width: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Asher Lim</h1>
+          <div class="subtitle">Full Stack Developer, Lead Engineer at Klarna</div>
+          <p>Software Developer and Computer Science graduate from Singapore. Based in Stockholm, Sweden.</p>
+          <p>JavaScript, React, React Native, Node.js</p>
+          <div class="hero-links">
+            <a href="https://linkedin.com/in/asherlzr" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+            <a href="https://drive.google.com/file/d/1LTQ6jqlvKxntFMM6PwJ_ySaNOHwFf270/view" target="_blank">
+              <i class="fas fa-file-pdf"></i>
+              Resume
+            </a>
+            <a href="https://github.com/asherLZR" target="_blank">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="star-1"></div>
+          <div class="star-2"></div>
+          <div class="star-3"></div>
+          <div class="star-4"></div>
+          <div class="star-5"></div>
+          <div class="star-6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025-present Asher Lim Zhi Rong</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
