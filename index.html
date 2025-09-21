@@ -5,13 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asher Lim</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <meta name="description" content="Personal website of Asher Lim" />
+  <meta name="image" content="https://asherlzr.com/assets/images/ashers-website.png" />
+  <meta name="keywords"
+    content="Asher Lim,Asher Lim Zhi Rong,Software Developer,Software Engineer,Singapore, Stockholm, Sweden" />
+  <meta property="og:url" content="https://www.asherLZR.com" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Asher Lim" />
+  <meta property="og:description" content="Personal website of Asher Lim" />
+  <meta property="og:image" content="https://asherlzr.com/assets/images/ashers-website.png" />
+  <meta property="og:image:width" content="312" />
+  <meta property="og:image:height" content="312" />
 
   <style>
+    /* pixelify-sans-regular - latin */
+    @font-face {
+      font-display: swap;
+      font-family: 'Pixelify Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/assets/fonts/pixelify-sans-v3-latin-regular.woff2') format('woff2');
+    }
+
+    /* pixelify-sans-700 - latin */
+    @font-face {
+      font-display: swap;
+      font-family: 'Pixelify Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/assets/fonts/pixelify-sans-v3-latin-700.woff2') format('woff2');
+    }
+
+    /* inter-regular - latin */
+    @font-face {
+      font-display: swap;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+    }
+
+    /* inter-700 - latin */
+    @font-face {
+      font-display: swap;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +66,7 @@
     }
 
     :root {
-      --primary-color: #f3f3f3;
+      --primary-color: #e6e6e6;
       --secondary-color: #3b3b3b;
       --accent-color: #e0e0e0;
       --text-primary: #e0e0e0;
@@ -29,9 +76,12 @@
       --bg-secondary: #1f1f1f;
       --bg-accent: #1f1f1f;
       --border-color: #3b3b3b;
-      --star-dark: #6f6f6f;
-      --star-medium: #a4a4a4;
-      --star-light: #e8e8e8;
+      --star-dark: #414141;
+      --star-medium: #6f6f6f;
+      --star-light: #979797;
+      --star-dark-pulse: #d4d4d4;
+      --star-medium-pulse: #e8e8e8;
+      --star-light-pulse: #ffffff;
     }
 
     body {
@@ -60,21 +110,28 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       align-items: center;
+      margin-top: 100px;
+      margin-bottom: 80px;
     }
 
     .hero-text h1 {
       font-family: 'Pixelify Sans', 'Inter', sans-serif;
-      font-size: 3.5rem;
+      font-size: 4.2rem;
       font-weight: 700;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
       color: var(--primary-color);
     }
 
     .hero-text .subtitle {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: var(--bg-primary);
+      background-color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      padding: 10px 16px;
+      font-weight: 600;
+      width: max-content;
+      outline: 1px solid var(--bg-primary);
+      outline-offset: -3px;
     }
 
     .hero-text p {
@@ -86,62 +143,52 @@
 
     .hero-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       margin-top: 2rem;
     }
 
     .hero-links a {
+      font-family: 'Pixelify Sans', 'Inter', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
+      padding: 0.4rem 1rem;
       text-decoration: none;
       font-weight: 400;
-      font-size: 0.9rem;
-      background: transparent;
+      font-size: 1.2rem;
       color: var(--primary-color);
-      border: 1px solid var(--border-color);
-      transition: all 0.2s ease;
+      border: 1px solid;
+      outline: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      outline-offset: -4px;
+      background-color: var(--bg-primary);
+      border-color: var(--border-color);
     }
 
     .hero-links a:hover {
-      background: var(--primary-color);
+      background-color: var(--primary-color);
       color: var(--bg-primary);
       border-color: var(--primary-color);
     }
 
     .hero-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* background-color: aqua; */
       height: 100%;
       position: relative;
     }
 
     .star-1 {
+      bottom: 10%;
+      right: 50%;
       position: absolute;
-      top: -80px;
-      right: 20%;
       box-shadow: 48px 8px 0 0 var(--star-dark), 48px 24px 0 0 var(--star-medium), 32px 32px 0 0 var(--star-medium), 48px 32px 0 0 var(--star-light), 64px 32px 0 0 var(--star-medium), 40px 40px 0 0 var(--star-dark), 48px 40px 0 0 var(--star-light), 56px 40px 0 0 var(--star-dark), 8px 48px 0 0 var(--star-dark), 24px 48px 0 0 var(--star-medium), 32px 48px 0 0 var(--star-light), 40px 48px 0 0 var(--star-light), 48px 48px 0 0 var(--star-light), 56px 48px 0 0 var(--star-light), 64px 48px 0 0 var(--star-light), 72px 48px 0 0 var(--star-medium), 88px 48px 0 0 var(--star-dark), 40px 56px 0 0 var(--star-dark), 48px 56px 0 0 var(--star-light), 56px 56px 0 0 var(--star-dark), 32px 64px 0 0 var(--star-medium), 48px 64px 0 0 var(--star-light), 64px 64px 0 0 var(--star-medium), 48px 72px 0 0 var(--star-medium), 48px 88px 0 0 var(--star-dark);
       height: 8px;
       width: 8px;
     }
 
     .star-2 {
+      top: 80%;
+      right: 4%;
       position: absolute;
-      bottom: -20px;
-      left: 0;
-      box-shadow: 16px 8px 0 0 var(--star-medium), 8px 16px 0 0 var(--star-medium), 24px 16px 0 0 var(--star-medium), 16px 24px 0 0 var(--star-medium);
-      height: 8px;
-      width: 8px;
-    }
-
-    .star-6 {
-      position: absolute;
-      bottom: 10%;
-      right: 30%;
       box-shadow: 16px 8px 0 0 var(--star-medium), 8px 16px 0 0 var(--star-medium), 24px 16px 0 0 var(--star-medium), 16px 24px 0 0 var(--star-medium);
       height: 8px;
       width: 8px;
@@ -156,23 +203,118 @@
       width: 8px;
     }
 
+    .star-4 {
+      position: absolute;
+      top: 20%;
+      left: 25%;
+      box-shadow: 64px 8px 0 0 var(--star-dark), 64px 16px 0 0 var(--star-dark), 32px 32px 0 0 var(--star-medium), 64px 32px 0 0 var(--star-medium), 96px 32px 0 0 var(--star-medium), 40px 40px 0 0 var(--star-medium), 64px 40px 0 0 var(--star-light), 88px 40px 0 0 var(--star-medium), 64px 48px 0 0 var(--star-light), 56px 56px 0 0 var(--star-light), 64px 56px 0 0 var(--star-light), 72px 56px 0 0 var(--star-light), 8px 64px 0 0 var(--star-dark), 16px 64px 0 0 var(--star-dark), 32px 64px 0 0 var(--star-medium), 40px 64px 0 0 var(--star-light), 48px 64px 0 0 var(--star-light), 56px 64px 0 0 var(--star-light), 64px 64px 0 0 var(--star-light), 72px 64px 0 0 var(--star-light), 80px 64px 0 0 var(--star-light), 88px 64px 0 0 var(--star-light), 96px 64px 0 0 var(--star-medium), 112px 64px 0 0 var(--star-dark), 120px 64px 0 0 var(--star-dark), 56px 72px 0 0 var(--star-light), 64px 72px 0 0 var(--star-light), 72px 72px 0 0 var(--star-light), 64px 80px 0 0 var(--star-light), 40px 88px 0 0 var(--star-medium), 64px 88px 0 0 var(--star-light), 88px 88px 0 0 var(--star-medium), 32px 96px 0 0 var(--star-medium), 64px 96px 0 0 var(--star-medium), 96px 96px 0 0 var(--star-medium), 64px 112px 0 0 var(--star-dark), 64px 120px 0 0 var(--star-dark);
+      height: 8px;
+      width: 8px;
+    }
+
     .star-5 {
       position: absolute;
-      top: 80%;
-      right: 4%;
+      bottom: -20px;
+      left: 0;
       box-shadow: 16px 8px 0 0 var(--star-medium);
       height: 8px;
       width: 8px;
     }
 
-    .star-4 {
+    .star-6 {
       position: absolute;
-      top: 20%;
-      left: 30%;
-      box-shadow: 64px 8px 0 0 rgba(111, 111, 111, 1), 64px 16px 0 0 rgba(111, 111, 111, 1), 32px 32px 0 0 rgba(164, 164, 164, 1), 64px 32px 0 0 rgba(164, 164, 164, 1), 96px 32px 0 0 rgba(164, 164, 164, 1), 40px 40px 0 0 rgba(164, 164, 164, 1), 64px 40px 0 0 rgba(232, 232, 232, 1), 88px 40px 0 0 rgba(164, 164, 164, 1), 64px 48px 0 0 rgba(232, 232, 232, 1), 56px 56px 0 0 #ffffff, 64px 56px 0 0 #ffffff, 72px 56px 0 0 #ffffff, 8px 64px 0 0 rgba(111, 111, 111, 1), 16px 64px 0 0 rgba(111, 111, 111, 1), 32px 64px 0 0 rgba(164, 164, 164, 1), 40px 64px 0 0 rgba(232, 232, 232, 1), 48px 64px 0 0 #ffffff, 56px 64px 0 0 #ffffff, 64px 64px 0 0 #ffffff, 72px 64px 0 0 #ffffff, 80px 64px 0 0 #ffffff, 88px 64px 0 0 rgba(232, 232, 232, 1), 96px 64px 0 0 rgba(164, 164, 164, 1), 112px 64px 0 0 rgba(111, 111, 111, 1), 120px 64px 0 0 rgba(111, 111, 111, 1), 56px 72px 0 0 #ffffff, 64px 72px 0 0 #ffffff, 72px 72px 0 0 #ffffff, 64px 80px 0 0 #ffffff, 40px 88px 0 0 rgba(164, 164, 164, 1), 64px 88px 0 0 rgba(232, 232, 232, 1), 88px 88px 0 0 rgba(164, 164, 164, 1), 32px 96px 0 0 rgba(164, 164, 164, 1), 64px 96px 0 0 rgba(164, 164, 164, 1), 96px 96px 0 0 rgba(164, 164, 164, 1), 64px 112px 0 0 rgba(111, 111, 111, 1), 64px 120px 0 0 rgba(111, 111, 111, 1);
+      bottom: 50%;
+      right: 15%;
+      box-shadow: 16px 16px 0 0 var(--star-medium);
       height: 8px;
       width: 8px;
     }
+
+    .star-7 {
+      top: -80px;
+      right: 30%;
+      position: absolute;
+      box-shadow: 72px 8px 0 0 var(--star-dark), 128px 8px 0 0 var(--star-dark), 120px 16px 0 0 var(--star-dark), 136px 16px 0 0 var(--star-dark), 72px 24px 0 0 var(--star-medium), 128px 24px 0 0 var(--star-dark), 72px 32px 0 0 var(--star-medium), 48px 48px 0 0 var(--star-medium), 72px 48px 0 0 var(--star-light), 96px 48px 0 0 var(--star-medium), 40px 56px 0 0 var(--star-medium), 72px 56px 0 0 var(--star-light), 104px 56px 0 0 var(--star-medium), 56px 64px 0 0 var(--star-medium), 72px 64px 0 0 var(--star-light), 88px 64px 0 0 var(--star-medium), 72px 72px 0 0 var(--star-light), 32px 80px 0 0 var(--star-dark), 48px 80px 0 0 var(--star-medium), 56px 80px 0 0 var(--star-light), 64px 80px 0 0 var(--star-light), 72px 80px 0 0 var(--star-light), 80px 80px 0 0 var(--star-light), 88px 80px 0 0 var(--star-light), 96px 80px 0 0 var(--star-medium), 112px 80px 0 0 var(--star-dark), 72px 88px 0 0 var(--star-light), 56px 96px 0 0 var(--star-medium), 72px 96px 0 0 var(--star-light), 88px 96px 0 0 var(--star-medium), 40px 104px 0 0 var(--star-medium), 72px 104px 0 0 var(--star-light), 104px 104px 0 0 var(--star-medium), 48px 112px 0 0 var(--star-medium), 72px 112px 0 0 var(--star-light), 96px 112px 0 0 var(--star-medium), 16px 128px 0 0 var(--star-dark), 72px 128px 0 0 var(--star-medium), 8px 136px 0 0 var(--star-dark), 24px 136px 0 0 var(--star-dark), 72px 136px 0 0 var(--star-medium), 16px 144px 0 0 var(--star-dark), 72px 152px 0 0 var(--star-dark);
+      height: 8px;
+      width: 8px;
+    }
+
+    .star-8 {
+      top: 70%;
+      left: 8%;
+      position: absolute;
+      box-shadow: 16px 8px 0 0 var(--star-medium), 8px 16px 0 0 var(--star-medium), 24px 16px 0 0 var(--star-medium), 16px 24px 0 0 var(--star-medium);
+      height: 8px;
+      width: 8px;
+    }
+
+    /* Add smooth transitions to all stars */
+    .star-1,
+    .star-2,
+    .star-3,
+    .star-4,
+    .star-5,
+    .star-6,
+    .star-7,
+    .star-8 {
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /* Pulsating animation keyframes */
+    @keyframes starPulse {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Pulsating shine states */
+    .star-1.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 48px 8px 0 0 var(--star-dark-pulse), 48px 24px 0 0 var(--star-medium-pulse), 32px 32px 0 0 var(--star-medium-pulse), 48px 32px 0 0 var(--star-light-pulse), 64px 32px 0 0 var(--star-medium-pulse), 40px 40px 0 0 var(--star-dark-pulse), 48px 40px 0 0 var(--star-light-pulse), 56px 40px 0 0 var(--star-dark-pulse), 8px 48px 0 0 var(--star-dark-pulse), 24px 48px 0 0 var(--star-medium-pulse), 32px 48px 0 0 var(--star-light-pulse), 40px 48px 0 0 var(--star-light-pulse), 48px 48px 0 0 var(--star-light-pulse), 56px 48px 0 0 var(--star-light-pulse), 64px 48px 0 0 var(--star-light-pulse), 72px 48px 0 0 var(--star-medium-pulse), 88px 48px 0 0 var(--star-dark-pulse), 40px 56px 0 0 var(--star-dark-pulse), 48px 56px 0 0 var(--star-light-pulse), 56px 56px 0 0 var(--star-dark-pulse), 32px 64px 0 0 var(--star-medium-pulse), 48px 64px 0 0 var(--star-light-pulse), 64px 64px 0 0 var(--star-medium-pulse), 48px 72px 0 0 var(--star-medium-pulse), 48px 88px 0 0 var(--star-dark-pulse);
+    }
+
+    .star-2.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 16px 8px 0 0 var(--star-medium-pulse), 8px 16px 0 0 var(--star-medium-pulse), 24px 16px 0 0 var(--star-medium-pulse), 16px 24px 0 0 var(--star-medium-pulse);
+    }
+
+    .star-3.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 16px 8px 0 0 var(--star-medium-pulse);
+    }
+
+    .star-4.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 64px 8px 0 0 var(--star-dark-pulse), 64px 16px 0 0 var(--star-dark-pulse), 32px 32px 0 0 var(--star-medium-pulse), 64px 32px 0 0 var(--star-medium-pulse), 96px 32px 0 0 var(--star-medium-pulse), 40px 40px 0 0 var(--star-medium-pulse), 64px 40px 0 0 var(--star-light-pulse), 88px 40px 0 0 var(--star-medium-pulse), 64px 48px 0 0 var(--star-light-pulse), 56px 56px 0 0 var(--star-light-pulse), 64px 56px 0 0 var(--star-light-pulse), 72px 56px 0 0 var(--star-light-pulse), 8px 64px 0 0 var(--star-dark-pulse), 16px 64px 0 0 var(--star-dark-pulse), 32px 64px 0 0 var(--star-medium-pulse), 40px 64px 0 0 var(--star-light-pulse), 48px 64px 0 0 var(--star-light-pulse), 56px 64px 0 0 var(--star-light-pulse), 64px 64px 0 0 var(--star-light-pulse), 72px 64px 0 0 var(--star-light-pulse), 80px 64px 0 0 var(--star-light-pulse), 88px 64px 0 0 var(--star-light-pulse), 96px 64px 0 0 var(--star-medium-pulse), 112px 64px 0 0 var(--star-dark-pulse), 120px 64px 0 0 var(--star-dark-pulse), 56px 72px 0 0 var(--star-light-pulse), 64px 72px 0 0 var(--star-light-pulse), 72px 72px 0 0 var(--star-light-pulse), 64px 80px 0 0 var(--star-light-pulse), 40px 88px 0 0 var(--star-medium-pulse), 64px 88px 0 0 var(--star-light-pulse), 88px 88px 0 0 var(--star-medium-pulse), 32px 96px 0 0 var(--star-medium-pulse), 64px 96px 0 0 var(--star-medium-pulse), 96px 96px 0 0 var(--star-medium-pulse), 64px 112px 0 0 var(--star-dark-pulse), 64px 120px 0 0 var(--star-dark-pulse);
+    }
+
+    .star-5.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 16px 8px 0 0 var(--star-medium-pulse);
+    }
+
+    .star-6.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 16px 16px 0 0 var(--star-medium-pulse);
+    }
+
+    .star-7.pulse {
+      animation: starPulse 1.5s ease-in-out infinite;
+      box-shadow: 72px 8px 0 0 var(--star-medium-pulse), 128px 8px 0 0 var(--star-medium-pulse), 120px 16px 0 0 var(--star-medium-pulse), 136px 16px 0 0 var(--star-medium-pulse), 72px 24px 0 0 var(--star-dark-pulse), 128px 24px 0 0 var(--star-medium-pulse), 72px 32px 0 0 var(--star-dark-pulse), 48px 48px 0 0 var(--star-dark-pulse), 72px 48px 0 0 var(--star-light-pulse), 96px 48px 0 0 var(--star-dark-pulse), 40px 56px 0 0 var(--star-dark-pulse), 72px 56px 0 0 var(--star-light-pulse), 104px 56px 0 0 var(--star-dark-pulse), 56px 64px 0 0 var(--star-dark-pulse), 72px 64px 0 0 var(--star-light-pulse), 88px 64px 0 0 var(--star-dark-pulse), 72px 72px 0 0 var(--star-light-pulse), 32px 80px 0 0 var(--star-medium-pulse), 48px 80px 0 0 var(--star-dark-pulse), 56px 80px 0 0 var(--star-light-pulse), 64px 80px 0 0 var(--star-light-pulse), 72px 80px 0 0 var(--star-light-pulse), 80px 80px 0 0 var(--star-light-pulse), 88px 80px 0 0 var(--star-light-pulse), 96px 80px 0 0 var(--star-dark-pulse), 112px 80px 0 0 var(--star-medium-pulse), 72px 88px 0 0 var(--star-light-pulse), 56px 96px 0 0 var(--star-dark-pulse), 72px 96px 0 0 var(--star-light-pulse), 88px 96px 0 0 var(--star-dark-pulse), 40px 104px 0 0 var(--star-dark-pulse), 72px 104px 0 0 var(--star-light-pulse), 104px 104px 0 0 var(--star-dark-pulse), 48px 112px 0 0 var(--star-dark-pulse), 72px 112px 0 0 var(--star-light-pulse), 96px 112px 0 0 var(--star-dark-pulse), 16px 128px 0 0 var(--star-medium-pulse), 72px 128px 0 0 var(--star-dark-pulse), 8px 136px 0 0 var(--star-medium-pulse), 24px 136px 0 0 var(--star-medium-pulse), 72px 136px 0 0 var(--star-dark-pulse), 16px 144px 0 0 var(--star-medium-pulse), 72px 152px 0 0 var(--star-medium-pulse);
+    }
+
+    .star-8.pulse {
+      box-shadow: 16px 8px 0 0 var(--star-medium-pulse), 8px 16px 0 0 var(--star-medium-pulse), 24px 16px 0 0 var(--star-medium-pulse), 16px 24px 0 0 var(--star-medium-pulse);
+    }
+
 
     /* Footer */
     footer {
@@ -187,20 +329,81 @@
       color: var(--text-secondary);
     }
 
+    .hero-image-left {
+      display: none;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
+      .hero-text .subtitle {
+        /* ensure max width not exceeded on mobile, causing horizontal scroll */
+        font-size: 0.9rem;
+      }
+
       .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
       }
 
-      .hero-text h1 {
-        font-size: 2rem;
+      .hero-text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
       }
 
       .hero-links {
         justify-content: center;
         flex-wrap: wrap;
+      }
+
+      .hero-image-left {
+        display: block;
+      }
+
+      .hero-image-left .star-4 {
+        top: -90px;
+        left: 75%;
+      }
+
+      .hero-image-left .star-5 {
+        top: -30px;
+        left: 0;
+      }
+
+      .hero-image-left .star-8 {
+        top: -90px;
+        left: 30%;
+      }
+
+      .hero-image-right .star-1 {
+        bottom: -30px;
+        left: 20%;
+      }
+
+      .hero-image-right .star-2 {
+        bottom: -30px;
+        right: 20%;
+      }
+
+      .hero-image-right .star-3 {
+        display: none;
+      }
+
+      .hero-image-right .star-4 {
+        display: none;
+      }
+
+      .hero-image-right .star-6 {
+        bottom: -80px;
+        right: 30%;
+      }
+
+      .hero-image-right .star-7 {
+        display: none;
+      }
+
+      .hero-image-right .star-8 {
+        display: none;
       }
     }
   </style>
@@ -212,6 +415,11 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content">
+        <div class="hero-image hero-image-left">
+          <div class="star-4"></div>
+          <div class="star-5"></div>
+          <div class="star-8"></div>
+        </div>
         <div class="hero-text">
           <h1>Asher Lim</h1>
           <div class="subtitle">Full Stack Developer, Lead Engineer at Klarna</div>
@@ -232,13 +440,15 @@
             </a>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image hero-image-right">
           <div class="star-1"></div>
           <div class="star-2"></div>
           <div class="star-3"></div>
           <div class="star-4"></div>
           <div class="star-5"></div>
           <div class="star-6"></div>
+          <div class="star-7"></div>
+          <div class="star-8"></div>
         </div>
       </div>
     </div>
@@ -250,6 +460,75 @@
       <p>&copy; 2025-present Asher Lim Zhi Rong</p>
     </div>
   </footer>
+
+  <script>
+    // Cursor tracking and star interaction
+    document.addEventListener('DOMContentLoaded', function () {
+      const stars = document.querySelectorAll('[class^="star-"]');
+      const heroImage = document.querySelector('.hero-image');
+      const detectionRadius = 150; // pixels - expanded radius
+
+      // Store original star positions
+      const starPositions = [];
+
+      // Calculate star positions relative to the hero-image container
+      function updateStarPositions() {
+        const heroImageRect = heroImage.getBoundingClientRect();
+
+        stars.forEach((star, index) => {
+          const starRect = star.getBoundingClientRect();
+          const centerX = starRect.left + starRect.width / 2 - heroImageRect.left;
+          const centerY = starRect.top + starRect.height / 2 - heroImageRect.top;
+
+          starPositions[index] = {
+            x: centerX,
+            y: centerY,
+            element: star
+          };
+        });
+      }
+
+      // Calculate distance between two points
+      function getDistance(x1, y1, x2, y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+      }
+
+      // Check if cursor is near any star
+      function checkCursorProximity(mouseX, mouseY) {
+        const heroImageRect = heroImage.getBoundingClientRect();
+        const relativeX = mouseX - heroImageRect.left;
+        const relativeY = mouseY - heroImageRect.top;
+
+        stars.forEach((star, index) => {
+          const starPos = starPositions[index];
+          if (!starPos) return;
+
+          const distance = getDistance(relativeX, relativeY, starPos.x, starPos.y);
+
+          if (distance <= detectionRadius) {
+            // Cursor is within radius - add pulse class for pulsating effect
+            star.classList.add('pulse');
+          } else {
+            // Cursor is outside radius - remove pulse class
+            star.classList.remove('pulse');
+          }
+        });
+      }
+
+      // Track mouse movement
+      document.addEventListener('mousemove', function (e) {
+        checkCursorProximity(e.clientX, e.clientY);
+      });
+
+      // Update star positions on window resize
+      window.addEventListener('resize', function () {
+        updateStarPositions();
+      });
+
+      // Initialize star positions
+      updateStarPositions();
+    });
+  </script>
 
 </body>
 
